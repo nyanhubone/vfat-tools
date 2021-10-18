@@ -50,7 +50,7 @@ async function getHarmonyUniPool(App, pool, poolAddress, stakingAddress) {
 }
 
 async function getHarmonyErc20(App, token, address, stakingAddress) {
-    if (address == "0x0000000000000000000000000000000000000000") {
+  if (address == "0x0000000000000000000000000000000000000000") {
       return {
         address,
         name : "One",
@@ -62,19 +62,6 @@ async function getHarmonyErc20(App, token, address, stakingAddress) {
         contract: null,
         tokens:[address]
       }
-    }
-    const decimals = await token.decimals()
-    return {
-      address,
-      name : "One",
-      symbol : "ONE",
-      totalSupply: 1e8,
-      decimals: 18,
-      staked: 0,
-      unstaked: 0,
-      contract: null,
-      tokens:[address]
-    }
   }
   const calls = [token.decimals(), token.balanceOf(stakingAddress), token.balanceOf(App.YOUR_ADDRESS),
     token.name(), token.symbol(), token.totalSupply()];
