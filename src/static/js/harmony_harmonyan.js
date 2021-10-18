@@ -37,4 +37,8 @@ async function main() {
 
 hideLoading();
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 22f19ef70b5b4c118aab4299a0d3594105cf0ff8
